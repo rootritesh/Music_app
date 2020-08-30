@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-#Currently in Progress
+# Currently in Progress
 
 ## Getting Started
 
