@@ -1,6 +1,7 @@
 import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 AudioPlayer myPlayer = new AudioPlayer();
 var mymusic = new AudioCache(fixedPlayer: myPlayer);
@@ -20,7 +21,7 @@ stop() {
 
 body() {
   var MyBody = Column(
-    // mainAxisAlignment: MainAxisAlignment.center,
+    mainAxisAlignment: MainAxisAlignment.spaceAround,
     crossAxisAlignment: CrossAxisAlignment.center,
     children: <Widget>[
       Container(
@@ -35,13 +36,27 @@ body() {
       Container(
         width: 100,
         height: 50,
-        child: RaisedButton(
-          onPressed: () {
-            Text('Play');
-            playsongs();
-          },
+        child: OutlineButton(
+          onPressed: playsongs,
+          child: Icon(Icons.play_arrow),
         ),
-      )
+      ),
+      Container(
+        width: 100,
+        height: 50,
+        child: OutlineButton(
+          onPressed: pause,
+          child: Icon(Icons.pause),
+        ),
+      ),
+      Container(
+        width: 100,
+        height: 50,
+        child: OutlineButton(
+          onPressed: stop,
+          child: Icon(Icons.stop),
+        ),
+      ),
     ],
   );
   return MyBody;
