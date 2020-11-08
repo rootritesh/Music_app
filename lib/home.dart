@@ -54,11 +54,12 @@ body() {
         ),
       ),
       Container(
-        width: 500,
-        height: 300,
+        // width: 500,
+        // height: 300,
+        margin: EdgeInsets.only(top: 35, bottom: 45, left: 10, right: 10),
         child: Card(
           color: Colors.black,
-          child: Image.asset('images/icon.gif'),
+          child: Image.asset('images/icon1.gif'),
           elevation: 10,
         ),
       ),
