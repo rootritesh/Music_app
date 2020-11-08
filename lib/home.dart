@@ -3,12 +3,12 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-AudioPlayer myPlayer = new AudioPlayer();
-var mymusic = new AudioCache(fixedPlayer: myPlayer);
+AudioPlayer myPlayer = AudioPlayer();
+var mymusic = AudioCache(fixedPlayer: myPlayer);
 
 playsongs() async {
-  mymusic.clearCache();
-  await myPlayer.play('audio1.mp3');
+  // mymusic.clearCache();
+  await mymusic.play('audio1.mp3');
 }
 
 pause() {
@@ -29,19 +29,19 @@ body() {
     crossAxisAlignment: CrossAxisAlignment.center,
     children: <Widget>[
       Container(
-        margin: EdgeInsets.only(top: 30),
-        padding: EdgeInsets.all(20),
+        margin: EdgeInsets.only(top: 28),
+        // padding: EdgeInsets.all(20),
         width: 200,
         height: 200,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: Colors.white),
+          // border: Border.all(color: Colors.white),
           boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.5),
-              spreadRadius: 5,
+              spreadRadius: 7,
               blurRadius: 7,
-              offset: Offset(0, 3), // changes position of shadow
+              offset: Offset(0, 0), // changes position of shadow
             ),
           ],
         ),
@@ -49,7 +49,7 @@ body() {
         // child: Image.asset('images/head.gif'),
         child: Card(
           color: Colors.black,
-          child: Image.asset('images/head.gif'),
+          child: Image.asset('images/head.png'),
           elevation: 10,
         ),
       ),
